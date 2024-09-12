@@ -44,6 +44,11 @@ h2 {
   line-height: 1.2;
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
 @media (width >= 80em) {
   :root {
     --text-sm: .875rem;
