@@ -1,0 +1,117 @@
+section.hero {
+  max-width: 80rem;
+  width: 100%;
+  padding-inline: 2rem;
+  margin-inline: auto;
+
+  & h1 div {
+    /* para não quebrar a linha */
+    display: inline-block;
+
+    /* Esconder a palavra em baixo */
+    overflow: hidden;
+
+    height: var(--text-xl);/* tamanho da fonte */
+
+    /* Tamanho mínimo que não quebre as letras, mas que possa quebrar as palavras */
+    width: min-content;
+
+    vertical-align: text-top;
+
+    & span {
+      display: block;
+      animation: slideUp 6s infinite;
+    }
+  } 
+
+  & h1 div span:nth-child(1),
+  & h1 div span:nth-child(4) {
+    color: var(--snitap-sky-mid);
+  }
+  & h1 span:nth-child(2) {
+    color: var(--snitap-joy-mid);
+  }
+  & h1 span:nth-child(3) {
+    color: var(--snitap-leaf-mid);
+  }
+}
+
+@keyframes slideUp {
+  /* RADICAL STATIC */
+  0%, 22% {
+    transform: translateY(0);
+  }
+
+  /* ele movimenta o tamanho da linha, que é a fonte * o line-height 
+   BASE DO CALCULO:
+   transform: translateY(calc(var(--text-xl) * -1 * 1.25));
+  
+  pra fazer a movimentação de bounce, adiciona -15px +10px -5px ao cálculo
+  */
+
+  /* DIVERTIDA IN */
+  23% {
+    transform: translateY(calc((var(--text-xl) * -1 * 1.25) - 15px));;
+  }
+
+  25% {
+    transform: translateY(calc((var(--text-xl) * -1 * 1.25) + 10px));;
+  }
+
+  27% {
+    transform: translateY(calc((var(--text-xl) * -1 * 1.25) - 5px));;
+  }
+
+  29% {
+    transform: translateY(calc((var(--text-xl) * -1 * 1.25) + 5px));;
+  }
+
+  /* DIVERTIDA STATIC */
+  33%, 55% {
+    transform: translateY(calc(var(--text-xl) * -1 * 1.25));
+  }
+  
+  /* SAUDÁVEL IN */
+  56% {
+    transform: translateY(calc((var(--text-xl) * -1 * 1.25 * 2) - 15px));
+  }
+
+  58% {
+    transform: translateY(calc((var(--text-xl) * -1 * 1.25 * 2) + 10px));
+  }
+
+  60% {
+    transform: translateY(calc((var(--text-xl) * -1 * 1.25 * 2) - 5px));
+  }
+
+  62% {
+    transform: translateY(calc((var(--text-xl) * -1 * 1.25 * 2) + 5px));
+  }
+
+  /* SAUDÁVEL STATIC */
+  66%, 88% {
+    transform: translateY(calc(var(--text-xl) * -1 * 1.25 * 2));
+  }
+  
+  /* RADICAL IN */
+  89% {
+    transform: translateY(calc((var(--text-xl) * -1 * 1.25 * 3) - 15px));
+  }
+
+  91% {
+    transform: translateY(calc((var(--text-xl) * -1 * 1.25 * 3) + 10px));
+  }
+
+  93%{
+    transform: translateY(calc((var(--text-xl) * -1 * 1.25 * 3) - 5px));
+  }
+
+  95% {
+    transform: translateY(calc((var(--text-xl) * -1 * 1.25 * 3) + 5px));
+  }
+
+  /* VOLTA PARA O RADICAL */
+  100% {
+    transform: translateY(calc(var(--text-xl) * -1 * 1.25 * 3));
+  }
+}
