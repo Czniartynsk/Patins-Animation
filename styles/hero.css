@@ -2,6 +2,7 @@ section.hero {
   max-width: 80rem;
   width: 100%;
   padding-inline: 1.5rem;
+  padding-block: 3rem;
   margin-inline: auto;
 
   display: flex;
@@ -95,7 +96,6 @@ section.hero {
     max-width: 19.5rem;
     height: 19.5rem;
     overflow: hidden;
-    /* scale: .64; */
 
     & .content {
       width: 100%;
@@ -157,6 +157,7 @@ section.hero {
     flex-direction: row-reverse;
     align-items: center;
     padding-inline: 2rem;
+    padding-block: 2.5rem;
 
 
     .wrapper-buttons {
@@ -167,7 +168,6 @@ section.hero {
     & > div:first-child {
       max-width: 30.5rem;
       height: 30.5rem;
-      /* scale: 1; */
     }
   }
 }
