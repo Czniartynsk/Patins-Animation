@@ -33,7 +33,7 @@ section.gallery {
     animation: image-appear linear backwards;
     animation-timeline: view();
     /* para começar a animação um pouco antes */
-    animation-range: 100px 325px;
+    animation-range: 100px 500px;
 
     & > img {
       height: 16rem;
@@ -101,7 +101,7 @@ section.gallery {
       & figure {
         /* para atrasar o appear da imagem ao lado */
         &[data-delay] {
-          animation-range: 150px 350px;
+          animation-range: 150px 550px;
         }
       }
 
